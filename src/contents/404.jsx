@@ -1,18 +1,8 @@
 import clsx from 'clsx';
 import Link from 'next/link';
-import Image from "next/image";
 import {m, useAnimationControls} from "framer-motion";
-const emojiMotion = {
-    initial: {
-        scale: 1,
-    },
-    hover: {
-        scale: 1.2,
-    },
-    tap: {
-        scale: 0.8,
-    },
-};
+import AnimateEmoji from "src/components/AnimateEmoji";
+
 function Error404Contents() {
     const controls = useAnimationControls();
     return (
@@ -42,24 +32,17 @@ function Error404Contents() {
                         duration: 0.7,
                     }}
                 >
-                    <m.div variants={emojiMotion}>
-                        <Image
-                            className={clsx('pointer-events-none h-full w-full')}
-                            alt="Wave Hands Gesture"
-                            src="/assets/emojis/detective.png"
-                            width={256}
-                            height={256}
-                            onLoadingComplete={() => {
-                                controls.start({
-                                    opacity: 1,
-                                    y: 0,
-                                    rotate: 0,
-                                });
-                            }}
-                            unoptimized
-                            priority
-                        />
-                    </m.div>
+                    <AnimateEmoji className={clsx('pointer-events-none h-full w-full')}
+                                  alt="Wave Hands Gesture"
+                                  src="/assets/emojis/detective.png"
+                                  onLoadingComplete={() => {
+                                      controls.start({
+                                          opacity: 1,
+                                          y: 0,
+                                          rotate: 0,
+                                      });
+                                  }}
+                    />
                     <h1 className={clsx('pb-4 text-center')}>
                         <div className={clsx('text-2xl')}> Page Not Found</div>
                     </h1>
