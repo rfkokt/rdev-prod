@@ -39,8 +39,8 @@ function Error404Contents() {
                             className={clsx('w-full md:w-full')}
                             alt="Wave Hands Gesture"
                             src={detective}
-                            width={50}
-                            height={50}
+                            width={256}
+                            height={256}
                             onLoadingComplete={() => {
                                 controls.start({
                                     opacity: 1,
