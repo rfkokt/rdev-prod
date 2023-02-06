@@ -27,18 +27,6 @@ function Error404Contents() {
                     'dark:text-slate-400'
                 )}
             >
-                <m.div className={clsx('h-10 w-10')} variants={emojiMotion}>
-                    <Image
-                        className={clsx('pointer-events-none h-full w-full')}
-                        alt="Wave Hands Gesture"
-                        src="/assets/emojis/clapping-hands-animated.png"
-                        width={48}
-                        height={48}
-                        unoptimized
-                        priority
-                    />
-                </m.div>
-
                 <m.div
                     initial={{
                         opacity: 0,

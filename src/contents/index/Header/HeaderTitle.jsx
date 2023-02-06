@@ -3,6 +3,17 @@ import clsx from "clsx";
 import Image from "next/image";
 import HeaderCta from "src/contents/index/Header/HeaderCta";
 
+const emojiMotion = {
+    initial: {
+        scale: 1,
+    },
+    hover: {
+        scale: 1.2,
+    },
+    tap: {
+        scale: 0.8,
+    },
+};
 const animation = {
     hide: {x: -32, opacity: 0},
     show: {
@@ -27,19 +38,7 @@ function HeaderTitle() {
             >
                 hi!
                 <m.div
-                    initial={{
-                        opacity: 0,
-                        y: 16,
-                        rotate: 30,
-                        transformOrigin: 'right center',
-                    }}
-                    animate={controls}
-                    transition={{
-                        type: 'spring',
-                        delay: 0.35,
-                        bounce: 0.7,
-                        duration: 0.7,
-                    }}
+                    variants={emojiMotion}
                 >
                     <Image
                         className={clsx('w-7 md:w-10')}
