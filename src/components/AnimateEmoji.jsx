@@ -23,7 +23,7 @@ function AnimateEmoji({src,alt,className,onLoadingComplete}) {
                 width={256}
                 height={256}
                 onLoadingComplete={onLoadingComplete}
-                unoptimized
+                // unoptimized
                 priority
             />
         </m.div>

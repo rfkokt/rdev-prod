@@ -65,26 +65,6 @@ function HeaderTitle() {
                             });
                         }}
                     />
-                    {/*<m.div*/}
-                    {/*    variants={emojiMotion}*/}
-                    {/*>*/}
-                    {/*    <Image*/}
-                    {/*        className={clsx('w-7 md:w-10')}*/}
-                    {/*        alt="Wave Hands Gesture"*/}
-                    {/*        src="/assets/emojis/waving-hand-light-skin-tone.png"*/}
-                    {/*        width={256}*/}
-                    {/*        height={256}*/}
-                    {/*        onLoadingComplete={() => {*/}
-                    {/*            controls.start({*/}
-                    {/*                opacity: 1,*/}
-                    {/*                y: 0,*/}
-                    {/*                rotate: 20,*/}
-                    {/*            });*/}
-                    {/*        }}*/}
-                    {/*        unoptimized*/}
-                    {/*        priority*/}
-                    {/*    />*/}
-                    {/*</m.div>*/}
                 </m.div>
             </m.div>
             <span className={clsx('text-slate-700', 'dark:text-slate-300')}>
