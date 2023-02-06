@@ -38,19 +38,7 @@ function HeaderTitle() {
             >
                 hi!
                 <m.div
-                    initial={{
-                        opacity: 0,
-                        y: 16,
-                        rotate: 30,
-                        transformOrigin: 'right center',
-                    }}
                     animate={controls}
-                    transition={{
-                        type: 'spring',
-                        delay: 0.35,
-                        bounce: 0.7,
-                        duration: 0.7,
-                    }}
                     variants={emojiMotion}
                 >
                     <Image
@@ -64,7 +52,7 @@ function HeaderTitle() {
                                 opacity: 1,
                                 y: 0,
                                 rotate: 20,
-                            }).then(r => false);
+                            });
                         }}
                         priority
                     />
