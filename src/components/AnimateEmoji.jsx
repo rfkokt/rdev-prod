@@ -11,7 +11,7 @@ const emojiMotion = {
         scale: 0.8,
     },
 };
-function AnimateEmoji({src,alt,className,onLoadingComplete}) {
+function AnimateEmoji({src,alt,className,onLoadingComplete,unoptimized}) {
     return (
         <m.div
             variants={emojiMotion}
@@ -23,7 +23,7 @@ function AnimateEmoji({src,alt,className,onLoadingComplete}) {
                 width={256}
                 height={256}
                 onLoadingComplete={onLoadingComplete}
-                // unoptimized
+                unoptimized={unoptimized}
                 priority
             />
         </m.div>

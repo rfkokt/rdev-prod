@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import {m, useAnimationControls} from "framer-motion";
 import AnimateEmoji from "../components/AnimateEmoji";
+
 const emojiMotion = {
     initial: {
         scale: 1,
@@ -14,6 +15,7 @@ const emojiMotion = {
         scale: 0.8,
     },
 };
+
 function Error404Contents() {
     const controls = useAnimationControls();
     return (
@@ -54,6 +56,7 @@ function Error404Contents() {
                                 rotate: 0,
                             });
                         }}
+                        unoptimized
                     />
                     <h1 className={clsx('pb-4 text-center')}>
                         <div className={clsx('text-2xl')}> Page Not Found</div>
