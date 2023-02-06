@@ -2,14 +2,8 @@ import {m, useAnimationControls} from 'framer-motion';
 import clsx from "clsx";
 import Image from "next/image";
 import HeaderCta from "src/contents/index/Header/HeaderCta";
+import AnimateEmoji from "src/components/AnimateEmoji";
 
-const animation = {
-    hide: {x: -32, opacity: 0},
-    show: {
-        x: 0,
-        opacity: 1,
-    },
-};
 const emojiMotion = {
     initial: {
         scale: 1,
@@ -19,6 +13,13 @@ const emojiMotion = {
     },
     tap: {
         scale: 0.8,
+    },
+};
+const animation = {
+    hide: {x: -32, opacity: 0},
+    show: {
+        x: 0,
+        opacity: 1,
     },
 };
 
@@ -38,24 +39,50 @@ function HeaderTitle() {
             >
                 hi!
                 <m.div
+                    initial={{
+                        opacity: 0,
+                        y: 16,
+                        rotate: 30,
+                        transformOrigin: 'right center',
+                    }}
                     animate={controls}
-                    variants={emojiMotion}
+                    transition={{
+                        type: 'spring',
+                        delay: 0.35,
+                        bounce: 0.7,
+                        duration: 0.7,
+                    }}
                 >
-                    <Image
-                        className={clsx('w-7 md:w-10')}
-                        alt="Wave Hands Gesture"
-                        src="/assets/emojis/waving-hand-light-skin-tone.png"
-                        width={256}
-                        height={256}
-                        onLoadingComplete={() => {
-                            controls.start({
-                                opacity: 1,
-                                y: 0,
-                                rotate: 20,
-                            });
-                        }}
-                        priority
+                    <AnimateEmoji className={clsx('w-7 md:w-10')}
+                                  alt="Wave Hands Gesture"
+                                  src="/assets/emojis/waving-hand-light-skin-tone.png"
+                                  onLoadingComplete={() => {
+                                      controls.start({
+                                          opacity: 1,
+                                          y: 0,
+                                          rotate: 20,
+                                      });
+                                  }}
                     />
+                    {/*<m.div*/}
+                    {/*    variants={emojiMotion}*/}
+                    {/*>*/}
+                    {/*    <Image*/}
+                    {/*        className={clsx('w-7 md:w-10')}*/}
+                    {/*        alt="Wave Hands Gesture"*/}
+                    {/*        src="/assets/emojis/waving-hand-light-skin-tone.png"*/}
+                    {/*        width={256}*/}
+                    {/*        height={256}*/}
+                    {/*        onLoadingComplete={() => {*/}
+                    {/*            controls.start({*/}
+                    {/*                opacity: 1,*/}
+                    {/*                y: 0,*/}
+                    {/*                rotate: 20,*/}
+                    {/*            });*/}
+                    {/*        }}*/}
+                    {/*        priority*/}
+                    {/*    />*/}
+                    {/*</m.div>*/}
                 </m.div>
             </m.div>
             <span className={clsx('text-slate-700', 'dark:text-slate-300')}>
