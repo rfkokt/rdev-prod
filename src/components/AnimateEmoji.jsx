@@ -12,10 +12,8 @@ const emojiMotion = {
     },
 };
 function AnimateEmoji({src,alt,className,onLoadingComplete}) {
-    const controls = useAnimationControls();
     return (
         <m.div
-            animate={controls}
             variants={emojiMotion}
         >
             <Image
