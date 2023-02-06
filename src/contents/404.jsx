@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import Image from "next/image";
 import {m, useAnimationControls} from "framer-motion";
+import detective from 'src/assets/emojis/detective.png'
 
 function Error404Contents() {
     const controls = useAnimationControls();
@@ -37,7 +38,7 @@ function Error404Contents() {
                         <Image
                             className={clsx('w-full md:w-full')}
                             alt="Wave Hands Gesture"
-                            src="/assets/emojis/detective.png"
+                            src={detective}
                             width={50}
                             height={50}
                             onLoadingComplete={() => {
