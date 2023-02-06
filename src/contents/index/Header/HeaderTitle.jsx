@@ -61,7 +61,7 @@ function HeaderTitle() {
                             controls.start({
                                 opacity: 1,
                                 y: 0,
-                                rotate: 0,
+                                rotate: 20,
                             });
                         }}
                     />
