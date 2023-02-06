@@ -45,8 +45,8 @@ function HeaderTitle() {
                         className={clsx('w-7 md:w-10')}
                         alt="Wave Hands Gesture"
                         src="/assets/emojis/waving-hand-light-skin-tone.png"
-                        width={48}
-                        height={48}
+                        width={256}
+                        height={256}
                         onLoadingComplete={() => {
                             controls.start({
                                 opacity: 1,
