@@ -1,6 +1,5 @@
 import {m, useAnimationControls} from 'framer-motion';
 import clsx from "clsx";
-import Image from "next/image";
 import HeaderCta from "src/contents/index/Header/HeaderCta";
 import AnimateEmoji from "../../../components/AnimateEmoji";
 
