@@ -4,17 +4,6 @@ import Image from "next/image";
 import HeaderCta from "src/contents/index/Header/HeaderCta";
 import AnimateEmoji from "../../../components/AnimateEmoji";
 
-const emojiMotion = {
-    initial: {
-        scale: 1,
-    },
-    hover: {
-        scale: 1.2,
-    },
-    tap: {
-        scale: 0.8,
-    },
-};
 const animation = {
     hide: {x: -32, opacity: 0},
     show: {
@@ -57,6 +46,8 @@ function HeaderTitle() {
                         className={clsx('w-7 md:w-10')}
                         alt="Wave Hands Gesture"
                         src="/assets/emojis/waving-hand-light-skin-tone.png"
+                        mobile
+                        unoptimized={false}
                         onLoadingComplete={() => {
                             controls.start({
                                 opacity: 1,

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {m, useAnimationControls} from "framer-motion";
+
 const emojiMotion = {
     initial: {
         scale: 1,
@@ -11,7 +12,8 @@ const emojiMotion = {
         scale: 0.8,
     },
 };
-function AnimateEmoji({src,alt,className,onLoadingComplete,unoptimized}) {
+
+function AnimateEmoji({src, alt, className, onLoadingComplete, unoptimized,mobile}) {
     return (
         <m.div
             variants={emojiMotion}
@@ -20,8 +22,8 @@ function AnimateEmoji({src,alt,className,onLoadingComplete,unoptimized}) {
                 className={className}
                 alt={alt}
                 src={src}
-                width={256}
-                height={256}
+                width={mobile ? 50 : 256}
+                height={mobile ? 50 : 256}
                 onLoadingComplete={onLoadingComplete}
                 unoptimized={unoptimized}
                 priority
