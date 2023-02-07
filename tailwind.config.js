@@ -24,6 +24,7 @@ module.exports = {
             },
             colors: {
                 rdark:"#0d1117",
+                rdark_secondary : "#161b22",
                 rdev: {
                     blue: {
                         400: "#4B56D2",

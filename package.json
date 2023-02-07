@@ -1,9 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3011",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "find:unused": "next-unused"
+  },
+  "next-unused": {
+    "alias": {},
+    "include": ["src"],
+    "exclude": [],
+    "entrypoints": []
   },
   "dependencies": {
     "@headlessui/react": "^1.7.9",
@@ -20,6 +27,7 @@
     "moment": "^2.29.4",
     "next": "^13.1.6",
     "next-themes": "^0.2.1",
+    "next-unused": "^0.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "slug": "^8.2.2",
