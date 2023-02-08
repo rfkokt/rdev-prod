@@ -4,8 +4,16 @@ import {CalendarIcon} from 'src/components/Icons';
 import Link from "next/link";
 
 function CardRepo({
-                   title, description, date, tag1, tag2, link
-               }) {
+                      title, description, date, tag1, tag2, link
+                  }) {
+    function formatBytes(bytes, decimals = 2) {
+        if (!+bytes) return '0 Bytes'
+        const k = 1024
+        const dm = decimals < 0 ? 0 : decimals
+        const sizes = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+        const i = Math.floor(Math.log(bytes) / Math.log(k))
+        return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
+    }
     return (<Link
         href={link}
         target={"_blank"}
@@ -53,7 +61,7 @@ function CardRepo({
                 <div
                     className={clsx(['rounded-full'], ['px-2 py-0.5'], ['bg-yellow-100 text-yellow-700', 'dark:bg-yellow-500/20 dark:text-yellow-300',])}
                 >
-                    {tag2}
+                    {formatBytes(tag2)}
                 </div>)}
         </div>
         <div

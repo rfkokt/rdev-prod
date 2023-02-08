@@ -3,10 +3,9 @@ import clsx from "clsx";
 function CardSkeleton() {
     return (
         <div className={clsx(
-            'animate-pulse',
-            ' w-full border p-4',
             'lg:max-w-[360px]',
-            'min-h-full',
+            'animate-pulse',
+            'w-full border p-4',
             ['rounded-xl '],
             ['text-sm'],
             [

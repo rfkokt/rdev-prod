@@ -36,11 +36,13 @@ function RepoApps() {
                             {dataRep.map((item, index) => (
                                 <CardRepo key={index} title={item?.name} description={item?.description}
                                           tag1={item?.language}
-                                          date={item?.created_at} link={item?.svn_url}/>
+                                          date={item?.created_at}
+                                          link={item?.svn_url}
+                                          tag2={item.size}
+                                />
                             ))}
                         </>
                     )}
-
                     <Link href={'/work/skills-and-tools'} className={clsx(
                         'rounded-xl py-2 text-xl text-rdev-blue-600',
                         'dark:text-rdev-blue-500'
@@ -48,7 +50,7 @@ function RepoApps() {
                 </div>
             </SectionContent>
         </div>
-    )
+    );
 }
 
 export default RepoApps
