@@ -1,7 +1,7 @@
 import SectionTitle from "src/components/sections/SectionTitle";
 import clsx from "clsx";
 import SectionContent from "src/components/sections/SectionContent";
-import Cards from "src/contents/index/Cards/Cards";
+import CardRepo from "src/contents/index/Cards/CardRepo";
 import {getRepo} from "src/helpers/api";
 import {useEffect, useState} from "react";
 import Link from "next/link";
@@ -34,9 +34,9 @@ function RepoApps() {
                     ) : (
                         <>
                             {dataRep.map((item, index) => (
-                                <Cards key={index} title={item?.name} description={item?.description}
-                                       tag1={item?.language}
-                                       date={item?.created_at} link={item?.svn_url}/>
+                                <CardRepo key={index} title={item?.name} description={item?.description}
+                                          tag1={item?.language}
+                                          date={item?.created_at} link={item?.svn_url}/>
                             ))}
                         </>
                     )}

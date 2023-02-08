@@ -3,7 +3,7 @@ import moment from 'moment'
 import {CalendarIcon} from 'src/components/Icons';
 import Link from "next/link";
 
-function Cards({
+function CardRepo({
                    title, description, date, tag1, tag2, link
                }) {
     return (<Link
@@ -71,4 +71,4 @@ function Cards({
     </Link>);
 }
 
-export default Cards;
+export default CardRepo;
