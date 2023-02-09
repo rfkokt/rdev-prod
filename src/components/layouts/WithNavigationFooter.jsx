@@ -7,7 +7,6 @@ function WithNavigationFooter({children}) {
         <>
             <Navigation/>
             <main>
-                <Header/>
                 {children}
             </main>
             <Footer/>

@@ -1,7 +1,19 @@
 import clsx from "clsx";
 import Image from "next/image";
-import {LinkIcon, MediumIcon, TwitterIcon} from "../../../components/Icons";
+import {LinkIcon, MediumIcon, TwitterIcon} from "src/components/Icons";
 import Link from "next/link";
+import {m} from 'framer-motion'
+
+const animation = {
+    hide: {
+        x: -16,
+        opacity: 0,
+    },
+    show: {
+        x: 0,
+        opacity: 1,
+    },
+};
 
 function CardBlog({
                       as = 'h2',
@@ -11,12 +23,18 @@ function CardBlog({
                       alt,
                       media,
                       href,
-                      unoptimized
+                      unoptimized,
+                      duration
                   }) {
 
     const Heading = as;
     return (
-        <div className={clsx('w-full break-inside-avoid')}>
+        <m.div
+            initial={animation.hide}
+            animate={animation.show}
+            whileInView={"show"}
+            transition={{delay: duration * 0.2}}
+            className={clsx('w-full break-inside-avoid mb-10')}>
             <Link href={href ?? "/"}
                   target="_blank"
                   className={clsx(
@@ -57,7 +75,7 @@ function CardBlog({
                     )}
                 </div>
             </Link>
-        </div>
+        </m.div>
     )
 }
 

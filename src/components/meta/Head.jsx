@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 
-// import useCurrentUrl from 'src/hooks/useCurrentUrl';
+import useCurrentUrl from 'src/hooks/useCurrentUrl';
 
 function Head({
   title,
@@ -9,7 +9,7 @@ function Head({
   overrideTitle = false,
   structuredData = '',
 }) {
-  // const currentUrl = useCurrentUrl();
+  const currentUrl = useCurrentUrl();
 
   const htmlTitle = overrideTitle
     ? title
@@ -22,7 +22,7 @@ function Head({
       <link rel="icon" href="/favicon.ico" />
 
       {/* seo */}
-      {/*<link rel="canonical" href={currentUrl} />*/}
+      <link rel="canonical" href={currentUrl} />
 
       {/* og image */}
       <meta property="og:image" content={ogImage} />

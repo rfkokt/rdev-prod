@@ -4,18 +4,6 @@ import Image from "next/image";
 import {m, useAnimationControls} from "framer-motion";
 import AnimateEmoji from "../components/AnimateEmoji";
 
-const emojiMotion = {
-    initial: {
-        scale: 1,
-    },
-    hover: {
-        scale: 1.2,
-    },
-    tap: {
-        scale: 0.8,
-    },
-};
-
 function Error404Contents() {
     const controls = useAnimationControls();
     return (

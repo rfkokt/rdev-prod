@@ -10,7 +10,8 @@ import NavLogo from 'src/components/navigations/NavLogo';
 import useOnScroll from 'src/hooks/useOnScroll';
 
 const workLinks = [
-    {title: 'Post', href: '/work/skills-and-tools'}
+    {title: 'About', href: '/work/skills-and-tools'},
+    {title: 'Blog & Thread', href: '/blog'}
 ];
 
 function Navbar() {
@@ -40,10 +41,10 @@ function Navbar() {
                             <NavLogo href="/" title="Home"/>
                             <ul className={clsx('flex items-center', 'md:gap-1')}>
                                 <li className={clsx('lg:hidden')} data-accent="blue">
-                                    <NavLinkDropdown title="Work" items={workLinks}/>
+                                    <NavLinkDropdown title="Menu" items={workLinks}/>
                                 </li>
                                 <li className={clsx('hidden lg:block')} data-accent="blue">
-                                    <NavLinkExpanded title="Work" items={workLinks}/>
+                                    <NavLinkExpanded title="Home" items={workLinks}/>
                                 </li>
                             </ul>
                         </nav>

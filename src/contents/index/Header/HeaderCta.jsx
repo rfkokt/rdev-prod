@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import {m, useReducedMotion} from "framer-motion";
 import Link from "next/link";
+import {DocumentIcon} from "../../../components/Icons";
 
 const animation = {
     hide: {
@@ -54,12 +55,15 @@ function AvailableForHire() {
 function ButtonResume() {
     return (
         <a
+            onClick={()=>{
+                alert("Under construction 👋")
+            }}
             target="_blank"
             rel="noreferrer"
-            href="https://www.figma.com/community/file/1176377524040948926"
+            // href="https://www.figma.com/community/file/1176377524040948926"
             className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
         >
-            {/*<DocumentIcon className={clsx('h-5 w-5')} />*/}
+            <DocumentIcon className={clsx('h-5 w-5')} />
             RESUME
         </a>
     );

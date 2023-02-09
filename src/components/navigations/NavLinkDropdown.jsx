@@ -13,7 +13,6 @@ const animation = {
 
 const LinkRef = forwardRef(
   ({ href, children, ...rest }, ref) => (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <Link href={href} ref={ref} {...rest}>
       {children}
     </Link>
