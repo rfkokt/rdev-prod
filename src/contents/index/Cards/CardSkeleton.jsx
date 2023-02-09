@@ -3,7 +3,7 @@ import clsx from "clsx";
 function CardSkeleton() {
     return (
         <div className={clsx(
-            'lg:max-w-[360px]',
+            'lg:max-w-[370px]',
             'animate-pulse',
             'w-full border p-4',
             ['rounded-xl '],

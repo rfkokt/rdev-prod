@@ -33,7 +33,7 @@ function CardBlog({
             initial={animation.hide}
             animate={animation.show}
             whileInView={"show"}
-            transition={{delay: duration * 0.2}}
+            transition={{delay: duration * 0.1}}
             className={clsx('w-full break-inside-avoid mb-10')}>
             <Link href={href ?? "/"}
                   target="_blank"

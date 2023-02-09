@@ -5,11 +5,13 @@ import CardRepo from "src/contents/index/Cards/CardRepo";
 import {getRepo} from "src/helpers/api";
 import {useEffect, useState} from "react";
 import CardSkeleton from "../Cards/CardSkeleton";
+import dataBlog from "../BlogThread/data.json";
 
 function RepoApps() {
     const [dataRep, setDataRep] = useState([])
+    const [lenghtData, setLenghtData] = useState(4)
     const [isLoading, setIsLoading] = useState({
-        firstLoading: true, more: false,
+        firstLoading: true, more: true,
     })
     const isLoadingCard = Array.from(Array(2).keys())
     useEffect(() => {
@@ -39,7 +41,7 @@ function RepoApps() {
                 {isLoading.firstLoading ? (<>
                     {isLoadingCard.map((i) => (<CardSkeleton key={i}/>))}
                 </>) : (<>
-                    {dataRep.map((item, index) => (
+                    {dataRep.slice(0, lenghtData).map((item, index) => (
                         <CardRepo key={index}
                                   duration={index + 1}
                                   title={item?.name} description={item?.description}
@@ -52,19 +54,20 @@ function RepoApps() {
                 {isLoading.more && (<>
                     {isLoadingCard.map((i) => (<CardSkeleton key={i}/>))}
                 </>)}
-                <div onClick={() => {
-                    if (dataRep.length === 4) {
-                        setIsLoading({
-                            ...isLoading, more: true
-                        })
+                <div
+                    onClick={() => {
                         getDataRepo()
-                    }
-                }}
-                     className={clsx(
-                         'rounded-xl py-2 text-xl ',
-                         ['dark:text-slate-200', 'text-slate-700'],
-                         dataRep.length === 4 && ['cursor-pointer', 'dark:text-rdev-blue-500', 'text-rdev-blue-600'])}>
-                    {dataRep.length === 4 ? "Load more..." : "You've reached the end! 👋"}
+                        setIsLoading({
+                            ...isLoading,
+                            more: true,
+                        })
+                        setLenghtData(lenghtData + 10)
+                    }}
+                    className={clsx(
+                        'rounded-xl py-2 text-xl ',
+                        ['dark:text-slate-200', 'text-slate-700'],
+                        dataBlog.length > lenghtData && ['cursor-pointer', 'dark:text-rdev-blue-500', 'text-rdev-blue-600'])}>
+                    {dataBlog.length !== lenghtData ? "Load more..." : "You've reached the end! 👋"}
                 </div>
             </div>
         </SectionContent>

@@ -14,13 +14,13 @@ function BlogThread() {
                         href: '/blog'
                     }}
                     title="I can't write but i can share" caption="Blog & Thread"
-                              description="Share posts that I find interesting"/>
+                    description="Share posts that I find interesting"/>
             </header>
             <SectionContent>
                 <div
                     className={clsx('lg:columns-2 gap-3')}
                 >
-                    {dataBlog.map((item, index) => (
+                    {dataBlog.slice(0, 4).map((item, index) => (
                         <CardBlog href={item.href} title={item.title} username={item.username} src={item.src}
                                   alt={item.alt} media={item.media} unoptimized={item.unoptimized} key={index}
                                   duration={index + 1}
