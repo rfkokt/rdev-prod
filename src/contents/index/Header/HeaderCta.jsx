@@ -54,18 +54,18 @@ function AvailableForHire() {
 
 function ButtonResume() {
     return (
-        <a
+        <span
             onClick={()=>{
                 alert("Under construction 👋")
             }}
-            target="_blank"
+            // target="_blank"
             rel="noreferrer"
             // href="https://www.figma.com/community/file/1176377524040948926"
             className={clsx('button button--ghost px-2', 'md:button--big md:px-2')}
         >
             <DocumentIcon className={clsx('h-5 w-5')} />
             RESUME
-        </a>
+        </span>
     );
 }
 
