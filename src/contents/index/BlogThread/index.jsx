@@ -11,7 +11,7 @@ function BlogThread() {
                 <SectionTitle
                     button={{
                         title: "See more",
-                        href: 'blog'
+                        src: 'blog'
                     }}
                     title="I can't write but i can share" caption="Blog & Thread"
                     description="Share posts that I find interesting"/>
