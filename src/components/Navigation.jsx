@@ -10,7 +10,7 @@ import NavLogo from 'src/components/navigations/NavLogo';
 import useOnScroll from 'src/hooks/useOnScroll';
 
 const workLinks = [
-    {title: 'About', href: '/work/skills-and-tools'},
+    {title: 'About', href: '/about'},
     {title: 'Blog & Thread', href: '/blog'}
 ];
 

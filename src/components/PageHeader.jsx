@@ -62,8 +62,13 @@ function PageHeader({
           initial={animation.hide}
           animate={animation.show}
           transition={{ delay: 0.1 }}
-          className={clsx('flex justify-center')}
+          className={clsx('flex justify-center items-center')}
         >
+          {/*<span className={clsx(*/}
+          {/*    'text-[2.5rem] mb-3 font-extrabold leading-tight text-slate-700',*/}
+          {/*    'md:text-7xl md:leading-snug',*/}
+          {/*    'dark:text-slate-300'*/}
+          {/*)}>/</span>*/}
           <h1
             className={clsx(
               'text-[2.5rem] font-extrabold leading-tight text-slate-700',

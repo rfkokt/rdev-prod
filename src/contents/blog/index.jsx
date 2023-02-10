@@ -57,7 +57,6 @@ function BlogContent() {
                     {Tabs.map((item, i) => (
                         <Tab.Panel key={i} className="rounded-xl p-3">
                             <div
-                                a={console.log('debug a', dataBlog)}
                                 className={clsx('lg:columns-2 gap-3')}
                             >
                                 {dataBlog[item].slice(0, lenghtData).map((item, index) => (

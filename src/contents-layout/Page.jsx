@@ -25,7 +25,14 @@ function Page({
                 caption={caption}
                 headerImage={headerImage}
             />
+
             <div className={clsx('scroll-mt-[86px]')} id="main-contents">
+                <div
+                    className={clsx(
+                        'border-divider-light flex justify-center border-t py-6 -mt-16  text-xs',
+                        'dark:border-divider-dark'
+                    )}
+                />
                 {children}
             </div>
         </>
