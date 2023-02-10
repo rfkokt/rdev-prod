@@ -20,7 +20,7 @@ function BlogThread() {
                 <div
                     className={clsx('lg:columns-2 gap-3')}
                 >
-                    {dataBlog.slice(0, 4).map((item, index) => (
+                    {dataBlog.Pinned.slice(0, 4).map((item, index) => (
                         <CardBlog href={item.href} title={item.title} username={item.username} src={item.src}
                                   alt={item.alt} media={item.media} unoptimized={item.unoptimized} key={index}
                                   duration={index + 1}

@@ -15,7 +15,7 @@ const animation = {
 
 function BlogContent() {
     const [lenghtData, setLenghtData] = useState(4)
-    const Tabs = ['Programming', 'Tools', 'Motivation']
+    const Tabs = ["Islamic", 'Motivation', 'Programming', 'Tools',]
 
     return (
         <div className={clsx('content-wrapper')}>
@@ -25,7 +25,7 @@ function BlogContent() {
                     animate={animation.show}
                     transition={{delay: 0.1}}
                     className={clsx('flex justify-center mb-14')}>
-                    <Tab.List className={clsx('w-1/2 flex space-x-1 rounded-xl p-1')}>
+                    <Tab.List className={clsx('w-full lg:w-2/3 flex space-x-1 rounded-xl p-1')}>
                         {Tabs.map((item, i) => (
                             <Tab
                                 key={i}
@@ -57,9 +57,10 @@ function BlogContent() {
                     {Tabs.map((item, i) => (
                         <Tab.Panel key={i} className="rounded-xl p-3">
                             <div
+                                a={console.log('debug a', dataBlog)}
                                 className={clsx('lg:columns-2 gap-3')}
                             >
-                                {dataBlog.slice(0, lenghtData).map((item, index) => (
+                                {dataBlog[item].slice(0, lenghtData).map((item, index) => (
                                     <CardBlog href={item.href} title={item.title} username={item.username}
                                               src={item.src}
                                               alt={item.alt} media={item.media} unoptimized={item.unoptimized}
@@ -76,8 +77,8 @@ function BlogContent() {
                                     'flex justify-center',
                                     'rounded-xl py-2 text-xl ',
                                     ['dark:text-slate-200', 'text-slate-700'],
-                                    dataBlog.length > lenghtData && ['cursor-pointer', 'dark:text-rdev-blue-500', 'text-rdev-blue-600'])}>
-                                {dataBlog.length > lenghtData ? "Load more..." : "You've reached the end! 👋"}
+                                    dataBlog[item].length > lenghtData && ['cursor-pointer', 'dark:text-rdev-blue-500', 'text-rdev-blue-600'])}>
+                                {dataBlog[item].length === 0 ? "I haven't found anything interesting yet 😢" : dataBlog[item].length > lenghtData ? "Load more..." : "You've reached the end! 👋"}
                             </div>
                         </Tab.Panel>
                     ))}

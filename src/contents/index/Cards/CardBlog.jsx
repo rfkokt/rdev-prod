@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
-import {LinkIcon, MediumIcon, TwitterIcon} from "src/components/Icons";
+import {LinkIcon, MediumIcon, TwitterIcon, YoutubeIcon} from "src/components/Icons";
 import Link from "next/link";
 import {m} from 'framer-motion'
 
@@ -32,7 +32,6 @@ function CardBlog({
         <m.div
             initial={animation.hide}
             animate={animation.show}
-            whileInView={"show"}
             transition={{delay: duration * 0.1}}
             className={clsx('w-full break-inside-avoid mb-10')}>
             <Link href={href ?? "/"}
@@ -50,7 +49,8 @@ function CardBlog({
                             <TwitterIcon className={clsx('h-5 w-5')}/>
                         ) : media === "medium" ? (
                             <MediumIcon className={clsx('h-5 w-5')}/>
-                        ) : <LinkIcon className={clsx('h-5 w-5')}/>}
+                        ) : media === "youtube" ? <YoutubeIcon className={clsx('mb-1 h-5 w-5')}/> :
+                            <LinkIcon className={clsx('h-5 w-5')}/>}
                         <p className={clsx('mb-1 font-extrabold')}>{username}</p>
                     </div>
                     <Image

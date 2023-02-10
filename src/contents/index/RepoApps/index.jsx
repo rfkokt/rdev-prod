@@ -5,7 +5,7 @@ import CardRepo from "src/contents/index/Cards/CardRepo";
 import {getRepo} from "src/helpers/api";
 import {useEffect, useState} from "react";
 import CardSkeleton from "../Cards/CardSkeleton";
-import dataBlog from "../BlogThread/data.json";
+import dataRep from "../BlogThread/data.json";
 
 function RepoApps() {
     const [dataRep, setDataRep] = useState([])
@@ -15,14 +15,10 @@ function RepoApps() {
     })
     const isLoadingCard = Array.from(Array(2).keys())
     useEffect(() => {
-        getDataRepo(4)
+        getDataRepo()
     }, [])
-    const getDataRepo = (length) => {
+    const getDataRepo = () => {
         getRepo().then((res) => {
-            if (length) {
-                res.length = length
-                setDataRep(res)
-            }
             setDataRep(res)
             setIsLoading({
                 more: false, firstLoading: false
@@ -56,18 +52,20 @@ function RepoApps() {
                 </>)}
                 <div
                     onClick={() => {
-                        getDataRepo()
-                        setIsLoading({
-                            ...isLoading,
-                            more: true,
-                        })
-                        setLenghtData(lenghtData + 10)
+                        if (dataRep.length > lenghtData) {
+                            getDataRepo()
+                            setIsLoading({
+                                ...isLoading,
+                                more: true,
+                            })
+                            setLenghtData(lenghtData + 10)
+                        }
                     }}
                     className={clsx(
                         'rounded-xl py-2 text-xl ',
                         ['dark:text-slate-200', 'text-slate-700'],
-                        dataBlog.length > lenghtData && ['cursor-pointer', 'dark:text-rdev-blue-500', 'text-rdev-blue-600'])}>
-                    {dataBlog.length !== lenghtData ? "Load more..." : "You've reached the end! 👋"}
+                        dataRep.length > lenghtData && ['cursor-pointer', 'dark:text-rdev-blue-500', 'text-rdev-blue-600'])}>
+                    {dataRep.length > lenghtData ? "Load more..." : "You've reached the end! 👋"}
                 </div>
             </div>
         </SectionContent>
