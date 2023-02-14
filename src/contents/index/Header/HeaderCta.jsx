@@ -42,7 +42,7 @@ function AvailableForHire() {
         />
         <span
             className={clsx(
-                'bg-rdev-blue-500 relative inline-flex h-2 w-2 rounded-full',
+                'bg-rdev-blue-600 relative inline-flex h-2 w-2 rounded-full',
                 'dark:bg-rdev-blue-400'
             )}
         />
