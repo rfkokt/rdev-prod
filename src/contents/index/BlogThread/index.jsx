@@ -10,7 +10,7 @@ function BlogThread() {
             <header className={clsx('mb-8')}>
                 <SectionTitle
                     button={{
-                        title: "See more",
+                        title: "Blog more",
                         href: '/blog'
                     }}
                     title="I can't write but i can share" caption="Blog & Thread"
