@@ -1,7 +1,7 @@
 export const getBaseUrl = () => {
   switch (process.env.NEXT_PUBLIC_VERCEL_ENV) {
     case 'production':
-      return 'https://www.rdev.com';
+      return 'https://www.rdev.site';
     case 'preview':
       return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
     default:
