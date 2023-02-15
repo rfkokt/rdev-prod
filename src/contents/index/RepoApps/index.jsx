@@ -5,7 +5,6 @@ import CardRepo from "src/contents/index/Cards/CardRepo";
 import {getRepo} from "src/helpers/api";
 import {useEffect, useState} from "react";
 import CardSkeleton from "../Cards/CardSkeleton";
-import dataRep from "../BlogThread/data.json";
 
 function RepoApps() {
     const [dataRep, setDataRep] = useState([])

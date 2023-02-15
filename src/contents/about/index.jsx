@@ -69,7 +69,7 @@ function AboutContent() {
                         'dark:text-slate-400'
                     )}
                 >
-                    An intermediate front-end developer from Indonesia
+                    An intermediate front-end developer
                 </p>
             </m.div>
             <m.div
@@ -83,23 +83,25 @@ function AboutContent() {
                 )}
             >
                 <div>
-                    As a passionate back-end developer, I create amazing websites and web apps to make the internet a
-                    better place. I am an open-sourece enthusiast with a magic (artisan) touch inside like <a
-                    className={clsx('underline decoration-sky-500')}
-                    href="#">Laravel.</a>
+                    I am a Frontend Developer with more than 4 years of experience. I have a great passion for web
+                    application development which allows me to continue learning and improving my skills.
                 </div>
                 <br/>
                 <div>
-
-                    I am 24 years old and have been a web developer for as long as I can think. The technologies I work
-                    with are JavaScript, HTML, CSS and php with a focus on the frameworks Laravel, Nuxt.js, Tailwind. I
-                    use code not only to do my day-to-day job, but also to solve everyday problems I come across.
+                    I have a strong knowledge of HTML, CSS, and JavaScript, with a focus on the React.js, Next.js, and
+                    Tailwind frameworks. I also have experience building web applications with responsive and
+                    user-friendly designs.
                 </div>
                 <br/>
                 <div>
-                    When I am not writing code I love to spend time at room in Klaten or travelling around the world. I
-                    speak four languages: indonesian, javanese, arabic, english (some better than others). Furthermore I
-                    enjoy watching movie when I come home after a long day at the office.
+                    In addition, I have experience integrating web applications with APIs and third-party services, as
+                    well as testing and debugging web applications to ensure their quality and performance.
+                </div>
+                <br/>
+                <div>
+                    I am deeply interested in web technology and always looking for ways to enhance my skills and
+                    knowledge in this field. With my broad experience and strong knowledge of ReactJS and NextJS, I
+                    believe I can make a significant contribution to any web development project.
                 </div>
             </m.div>
             <m.div
@@ -146,7 +148,8 @@ function AboutContent() {
                 >
                     Education
                 </h1>
-                <CardEducation url="https://gunadarma.ac.id/" campus="Gunadarma University" study="Informatics Engineering" date={"11/2019"}/>
+                <CardEducation url="https://gunadarma.ac.id/" campus="University of Gunadarma"
+                               study="Informatics Engineering" date="11/2019"/>
             </m.div>
         </div>
     )
