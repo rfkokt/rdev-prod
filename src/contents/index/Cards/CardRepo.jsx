@@ -34,7 +34,7 @@ function CardRepo({
                     x: 0,
                     opacity: 1,
                 }}
-                transition={{delay: duration * 0.1}}
+                transition={{delay: 0.1}}
             >
                 <div
                     className={clsx(['mb-1'], ['text-lg font-bold'], ['text-slate-700', 'dark:text-slate-300'])}
