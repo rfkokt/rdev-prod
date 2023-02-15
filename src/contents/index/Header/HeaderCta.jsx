@@ -17,7 +17,7 @@ const animation = {
 function ButtonContactMe() {
     return (
         <Link
-            href="/work/contact"
+            href="/about"
             className={clsx('button button--solid min-w-[128px]', 'md:button--big')}
         >
             Get in Touch
