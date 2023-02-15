@@ -38,7 +38,7 @@ function BlogContent() {
                                                 'transition-all ease-in duration-100',
                                                 'text-slate-700 font-black',
                                                 'dark:text-slate-200',
-                                                'border-b-2 border-0',
+                                                'border-b-2',
                                                 'dark:border-rdark dark:border-b-slate-200',
                                                 'border-white border-b-slate-700',
                                             ] : [

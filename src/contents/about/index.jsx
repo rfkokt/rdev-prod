@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import {m} from 'framer-motion'
-import {CardExperience} from "./CardAbout";
+import {CardEducation, CardExperience} from "./CardAbout";
 
 const animation = {
     hide: {x: -32, opacity: 0},
@@ -146,6 +146,7 @@ function AboutContent() {
                 >
                     Education
                 </h1>
+                <CardEducation url="https://gunadarma.ac.id/" campus="Gunadarma University" study="Informatics Engineering" date={"11/2019"}/>
             </m.div>
         </div>
     )
